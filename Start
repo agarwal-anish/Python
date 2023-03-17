@@ -1,0 +1,21 @@
+#----- First Start will the Tkinter import!--------
+#Tkinter is a graphical user interface!
+
+from tkinter import * 
+root = Tk()
+
+root.title("Addition") #This is the title of the window
+root.geometry("400x200") # This is the size of the window that pops up!
+
+show_result=Label(root) #This is the label that will display the answer to the equation we will add later
+
+def add(): #This is the function
+    result= 5+2 #You can change this eqation to anything you like! 
+    show_result["text"]=result 
+    
+btn = Button(root, text="Add", command=add) #This is the button that you will click to get thge result
+btn.pack() #This is to automatlically alighn the button
+
+show_result.pack() #Thiis is to automatically align the label below the button
+
+root.mainloop() #We are closing the tkinter import
